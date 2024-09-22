@@ -1,14 +1,17 @@
-Here’s the **Fragrance Sales and Analysis Project** text in regular format with emojis and hyperlinks, keeping the structure clean and engaging:
 
----
 
 # Fragrance Sales and Analysis Project 💼
+
+## Project Overview 📊
+
+This project dives into the world of fragrance sales, uncovering key insights such as trends, price distributions, brand dominance, and consumer preferences. The analysis covers both men’s and women’s fragrances, using Python-based data science tools to clean, explore, and visualize large datasets. The goal is to provide actionable insights into market trends, product positioning, and consumer behavior within the fragrance industry.
+
 
 ## Table of Contents 📚
 
 
 1. [Project Overview](#project-overview-)  
-2. [Tools and Technologies](#tools-and-technologies-)  
+2. [Tools and Technologies](#tools-and-technologies) 
 3. [Step-by-Step Code Overview](#step-by-step-code-overview-)  
    - [1. Data Import and Initial Exploration](#1-data-import-and-initial-exploration-)  
    - [2. Data Cleaning: Handling Missing Values and Duplicates](#2-data-cleaning-handling-missing-values-and-duplicates-)  
