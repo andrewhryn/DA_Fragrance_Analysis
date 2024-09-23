@@ -1,6 +1,15 @@
 
 
-# Fragrance Sales and Analysis Project 💼
+# Fragrance Analysis: Insights into the Perfume Industry with Data 🔬
+![Banner](https://github.com/user-attachments/assets/906ab57d-d12b-42a6-9cf3-1329c62a1a4e)
+
+
+[![GitHub](https://img.shields.io/badge/GitHub-Andrew%20H-FFD700?logo=github&logoColor=white&style=for-the-badge)](https://github.com/andrewhryn)
+![Python](https://img.shields.io/badge/Python-3.8%2B-FFD700?logo=python&logoColor=white&style=for-the-badge)
+![Pandas](https://img.shields.io/badge/Pandas-1.2.0-FFD700?logo=pandas&logoColor=white&style=for-the-badge)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-2023-FFD700?logo=matplotlib&logoColor=black&style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-0.11.2-FFD700?logo=seaborn&logoColor=white&style=for-the-badge)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-FFD700?logo=jupyter&logoColor=white&style=for-the-badge)
 
 ## Project Overview 📊
 
@@ -23,12 +32,6 @@ This project dives into the world of fragrance sales, uncovering key insights su
 4. [Graphical Insights](#graphical-insights-)  
 5. [Summary](#summary-)  
 
-
----
-
-## Project Overview 📊
-
-This project dives into the world of fragrance sales, uncovering key insights such as trends, price distributions, brand dominance, and consumer preferences. The analysis covers both men’s and women’s fragrances, using Python-based data science tools to clean, explore, and visualize large datasets. The goal is to provide actionable insights into market trends, product positioning, and consumer behavior within the fragrance industry.
 
 ---
 
@@ -105,91 +108,6 @@ total_sales_by_category
 
 ---
 
-### 4. Price Distribution: Boxplot for Perfume Types 💵
-
-To visualize price variations across different perfume types, a boxplot was created. This helps compare the price range for types like Eau de Parfum and Eau de Toilette. Full code for this analysis is available [here](https://github.com/andrewhryn/Perfumes/blob/main/2_Data_Analysis.html).
-
-```python
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Create a boxplot for price distribution by perfume type
-sns.boxplot(x='type', y='price', data=data)
-plt.title('Price Distribution by Perfume Type')
-plt.xlabel('Type')
-plt.ylabel('Price (USD)')
-plt.show()
-```
-
-**Explanation**:  
-- **Skills**: Creating visualizations using Seaborn’s boxplot.  
-- **Purpose**: This plot provides a visual comparison of price ranges, making it easy to understand the pricing strategies of different perfume types.
-
----
-
-### 5. Trend Analysis: Perfume Launch Trends Over Time 📈
-
-Next, the dataset was grouped by launch year to analyze trends in perfume launches. A line chart visualizes the number of launches over time, showing market growth. The code for this step can be found [here](https://github.com/andrewhryn/Perfumes/blob/main/3_Sales_Data_cleaning.html).
-
-```python
-# Group by launch year to count the number of perfumes launched each year
-launch_trend = data.groupby('launch_year')['perfume'].count()
-
-# Plot the trend over time
-launch_trend.plot(kind='line', title='Perfume Launch Trends Over Time')
-plt.xlabel('Year')
-plt.ylabel('Number of Perfumes Launched')
-plt.show()
-```
-
-**Explanation**:  
-- **Skills**: Performing time-series analysis using `groupby()` and line plots.  
-- **Purpose**: This analysis highlights the growth of the fragrance market over time, showing an upward trend in new launches.
-
----
-
-### 6. Identifying Popular Fragrance Notes 🌸
-
-To identify the most commonly used fragrance notes, the data was analyzed to count the occurrences of each note. This bar chart visualizes the top fragrance notes. Full code for this section is available [here](https://github.com/andrewhryn/Perfumes/blob/main/4_Sales_Data_Analysis.html).
-
-```python
-# Count the occurrences of each fragrance note
-popular_notes = data['fragrance_notes'].value_counts().head(10)
-
-# Plot the most popular fragrance notes
-popular_notes.plot(kind='bar', title='Most Popular Fragrance Notes')
-plt.xlabel('Fragrance Notes')
-plt.ylabel('Frequency')
-plt.show()
-```
-
-**Explanation**:  
-- **Skills**: Using `value_counts()` to rank fragrance notes.  
-- **Purpose**: This reveals consumer preferences by identifying the most popular fragrance notes in perfumes.
-
----
-
-### 7. Visualizing Top-Selling Men’s Perfumes 🚹
-
-Lastly, the top 25 men’s perfumes were visualized in a bar chart, providing insights into the best-performing products in this category. Full code is available [here](https://github.com/andrewhryn/Perfumes/blob/main/4_Sales_Data_Analysis.html).
-
-```python
-# Filter the dataset for men's perfumes and find the top 25 by sales
-top_men_perfumes = data[data['gender'] == 'Men'].nlargest(25, 'sales')
-
-# Plot the top 25 men's perfumes by sales
-top_men_perfumes.plot(kind='bar', x='perfume_name', y='sales', title='Top 25 Men’s Perfumes by Sales')
-plt.xlabel('Perfume Name')
-plt.ylabel('Sales')
-plt.show()
-```
-
-**Explanation**:  
-- **Skills**: Filtering and visualizing data to rank products.  
-- **Purpose**: This chart helps to identify which men’s perfumes are leading in sales, providing insight into market success.
-
----
-
 ## Graphical Insights 📊
 
 This section showcases the key visualizations created during the analysis of the fragrance sales data. Each graph was generated using Python libraries like Matplotlib and Seaborn, and they provide valuable insights into brand dominance, price distribution, consumer preferences, and market trends.
@@ -198,21 +116,37 @@ This section showcases the key visualizations created during the analysis of the
 
 This scatter plot shows the most frequently used fragrance notes in perfumes. Musk, Jasmine, and Amber are among the top fragrance notes, indicating their popularity among perfume brands.
 
-![Most Popular Notes](https://github.com/andrewhryn/Perfumes/blob/main/Most%20Popular%20Notes.png)
+![Most Popular Notes](https://github.com/user-attachments/assets/b1e31e18-e2f8-4b78-835c-02459b0df45e)
 
 ```python
 # Scatter plot for most popular fragrance notes
-import matplotlib.pyplot as plt
 
-popular_notes = data['fragrance_notes'].value_counts().head(10)
-percent = (popular_notes / popular_notes.sum()) * 100
-plt.scatter(percent, popular_notes)
-for i, txt in enumerate(popular_notes.index):
-    plt.annotate(txt, (percent[i], popular_notes[i]), fontsize=10)
-plt.xlabel("Percent of all Perfumes")
-plt.ylabel("Total of Perfumes")
-plt.title("Most Popular Notes")
-plt.show()
+sns.scatterplot(data=notes, x='percent_of_all', y='count', palette='magma', hue='percent_of_all')
+plt.legend().remove()
+plt.xlabel('Percent of all Perfumes')
+plt.ylabel('Total of Perfumes')
+plt.title('Most Popular Notes')
+
+#Made using ChatGPT
+for i in range(len(notes)):
+    plt.text(notes['percent_of_all'].iloc[i], 
+             notes['count'].iloc[i], 
+             notes['notes_str'].iloc[i], 
+             fontsize=10, ha='right')
+```
+
+![Most Popular Notes (Barplot)](https://github.com/user-attachments/assets/a3cec17d-aae1-49b0-9d08-af6df312e142)
+
+```python
+
+#Building Barplot 
+
+sns.barplot(data=top10_notes, x='count', y='notes_str', palette='magma')
+sns.despine()
+
+plt.title('Most Popular Notes')
+plt.ylabel('')
+plt.xlabel('Total of Perfumes')
 ```
 
 ---
@@ -221,15 +155,17 @@ plt.show()
 
 This bar chart highlights the brands that have created the highest number of perfume variations. Musk leads the way, followed by Jasmine and Amber, showing their strong presence in the fragrance market.
 
-![Brands that created the most perfume variations](https://github.com/andrewhryn/Perfumes/blob/main/Brands%20that%20created%20the%20most%20perfume%20variations.png)
+![Brands that created the most perfume variations](https://github.com/user-attachments/assets/06b6b381-2d77-4ce8-b10e-d566fde474dc)
 
 ```python
-# Bar chart for brands with most perfume variations
-brands_with_variations = data['brand'].value_counts().head(10)
-brands_with_variations.plot(kind='barh', title='Brands that created the most perfume variations')
+#Building Barplot 
+
+sns.barplot(data=top10_size, x='perfume', y='brand', palette='magma')
+sns.despine()
+
+plt.title('Brands that created the most perfume variations')
+plt.ylabel('')
 plt.xlabel('Total of Perfumes')
-plt.ylabel('Brand')
-plt.show()
 ```
 
 ---
@@ -238,17 +174,15 @@ plt.show()
 
 This boxplot shows the price distribution of different types of perfumes. It highlights how Eau de Parfum generally has the highest price range, while Eau de Toilette and Cologne are more affordable.
 
-![Price Distribution by Perfume Type](https://github.com/andrewhryn/Perfumes/blob/main/Price%20Distribution%20by%20Perfume%20Type.png)
+![Price Distribution by Perfume Type](https://github.com/user-attachments/assets/8457d053-d000-42ec-941d-b5fd2b74a096)
 
 ```python
-# Boxplot for price distribution by perfume type
-import seaborn as sns
+sns.boxplot(data=med_category, y='type_cleaned', x='price', palette='magma')
 
-sns.boxplot(x='type', y='price', data=data)
+plt.ylabel('')
 plt.title('Price Distribution by Perfume Type')
-plt.xlabel('Type')
-plt.ylabel('Price (USD)')
-plt.show()
+plt.xlabel('Price (USD)')
+
 ```
 
 ---
@@ -257,15 +191,17 @@ plt.show()
 
 This bar chart shows the top 25 men’s perfumes ranked by the number of sales. Calvin Klein, Versace, and Davidoff are among the most popular brands in men’s fragrance.
 
-![Top 25 Men Perfumes by Number of Sales](https://github.com/andrewhryn/Perfumes/blob/main/Top%2025%20Men%20Perfumes%20by%20number%20of%20sales.png)
+![Top 25 Men Perfumes by number of sales](https://github.com/user-attachments/assets/3b3dd6ef-da9f-4e31-8bcc-613f8f0852ef)
+
 
 ```python
-# Bar chart for top 25 men's perfumes by sales
-top_men_perfumes = data[data['gender'] == 'Men'].nlargest(25, 'sales')
-top_men_perfumes.plot(kind='bar', x='perfume_name', y='sales', title='Top 25 Men’s Perfumes by Sales')
-plt.xlabel('Perfume Name')
-plt.ylabel('Sales')
-plt.show()
+sns.barplot(data=top_brand, x='sold', y='brand', palette='magma')
+sns.despine()
+
+plt.title('Top 25 Men Perfumes by number of sales')
+plt.ylabel('')
+plt.xlabel('Number of Sales')
+
 ```
 
 ---
@@ -274,15 +210,17 @@ plt.show()
 
 This line chart shows the upward trend in the number of perfumes launched over the past two decades. The data reveals a steady increase in perfume launches since the early 2000s.
 
-![Trend of Perfumes Over Last 20 Years](https://github.com/andrewhryn/Perfumes/blob/main/Trend%20of%20Perfumes%20Over%20Last%2020%20Years.png)
+![Trend of Pefumes Over Last 20 Years'](https://github.com/user-attachments/assets/119a4d37-2856-4607-b3f7-3bd6a06071ed)
 
 ```python
-# Line chart for perfume launches over time
-launch_trend = data.groupby('launch_year')['perfume'].count()
-launch_trend.plot(kind='line', title='Trend of Perfumes Over Last 20 Years')
+
+sns.lineplot(data=year, x='launch_year', y='total', color='red')
+plt.xticks(rotation=45)
+sns.despine()
+
 plt.xlabel('Launch Year')
 plt.ylabel('Total of Perfumes')
-plt.show()
+plt.title('Trend of Pefumes Over Last 20 Years')
 ```
 
 ---
@@ -291,37 +229,39 @@ plt.show()
 
 This bar chart provides a breakdown of the total sales for different perfume categories. Eau de Toilette leads the market in terms of sales, followed by Eau de Parfum and Cologne.
 
-![Total Sales for Different Perfume Categories](https://github.com/andrewhryn/Perfumes/blob/main/Total%20sales%20for%20different%20perfume%20categories.png)
+![Total sales for different perfume categories](https://github.com/user-attachments/assets/09e43495-c415-420f-8f73-40a09d8d7fa0)
+
 
 ```python
-# Bar chart for total sales across different perfume categories
-total_sales = data.groupby('type')['sales'].sum()
-total_sales.plot(kind='bar', title='Total sales for different perfume categories')
-plt.xlabel('Perfume Type')
+sns.barplot(data=top_category, x='type_cleaned', y='sold', palette='magma')
+sns.despine()
+
+plt.title('Total sales for different perfume categories')
+plt.xlabel('')
 plt.ylabel('Number of Sales')
-plt.show()
+
+plt.figtext(0.5, -0.2, """Typical fragrance concentrations for each type:
+1. Perfume (Parfum): 20% - 40%
+2. Eau de Parfum: 15% - 20%
+3. Eau de Toilette: 5% - 15%
+4. Cologne (Eau de Cologne): 2% - 4%""",
+            ha="center", fontsize=10)
 ```
 
 ---
 
-## Summary 📝
 
-This project provides a detailed analysis of the fragrance market using Python's data science capabilities. By cleaning, structuring, and visualizing the data, we identified key insights into product pricing, consumer preferences, and brand dominance. The data was sourced from the following:
-
-- **Perfume dataset**: Web scraped from [Fragrantica](https://www.fragrantica.com/) and analyzed by [this GitHub repository](https://github.com/rdemarqui/perfume_recommender).  
-- **Sales dataset**: Web scraped sales data from eBay (2024), available on [Kaggle](https://www.kaggle.com/code/muhammadaashirirshad/perfume-e-commerce-analysis-2024).
-
-### Key Findings:
+### Key Findings 🔑:
 - **Brand Dominance**: Brands like Avon and Demeter Fragrance dominate the market with a wide variety of products.  
 - **Price Distribution**: Eau de Parfum commands higher prices, while Eau de Toilette and Cologne offer more affordable options.  
 - **Consumer Preferences**: Popular fragrance notes such as Musk, Jasmine, and Amber are consistently in demand.  
 - **Market Growth**: The fragrance market has seen significant growth, with a steady increase in new perfume launches over the last 20 years.  
 - **Top Performers**: Calvin Klein, Versace, and Davidoff lead the men’s fragrance market in terms of sales.
 
-This project highlights the power of data science in providing insights into market trends, pricing strategies, and consumer behavior.
-
 ---
 
-```
+## References 📝
 
-This version is fully updated with emojis and hyperlinks, making it clean, engaging, and easy to navigate. You can now copy it into your GitHub README. Let me know if you need any further adjustments!
+- **Perfume dataset**: Web scraped from [Fragrantica](https://www.fragrantica.com/) and analyzed by [this GitHub repository](https://github.com/rdemarqui/perfume_recommender).  
+- **Sales dataset**: Web scraped sales data from eBay (2024), available on [Kaggle](https://www.kaggle.com/code/muhammadaashirirshad/perfume-e-commerce-analysis-2024).
+
