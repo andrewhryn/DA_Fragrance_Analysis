@@ -213,7 +213,7 @@ plt.xlabel('Number of Sales')
 
 This line chart shows the upward trend in the number of perfumes launched over the past two decades. The data reveals a steady increase in perfume launches since the early 2000s.
 
-![Trend of Pefumes Over Last 20 Years'](https://github.com/user-attachments/assets/119a4d37-2856-4607-b3f7-3bd6a06071ed)
+![Trend of Perfumes Over Last 20 Years](https://github.com/user-attachments/assets/eb98974f-1c1f-44e8-9558-9dae4ebb6ce3)
 
 ```python
 
