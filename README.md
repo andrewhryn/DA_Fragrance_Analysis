@@ -18,20 +18,19 @@ This project dives into the world of fragrance sales, uncovering key insights su
 
 ## Table of Contents 📚
 
-
-1. [Project Overview](#project-overview-)  
-2. [Tools and Technologies](#tools-and-technologies) 
-3. [Step-by-Step Code Overview](#step-by-step-code-overview-)  
-   - [1. Data Import and Initial Exploration](#1-data-import-and-initial-exploration-)  
-   - [2. Data Cleaning: Handling Missing Values and Duplicates](#2-data-cleaning-handling-missing-values-and-duplicates-)  
-   - [3. Data Transformation: Aggregating Sales Data](#3-data-transformation-aggregating-sales-data-)  
-   - [4. Price Distribution: Boxplot for Perfume Types](#4-price-distribution-boxplot-for-perfume-types-)  
-   - [5. Trend Analysis: Perfume Launch Trends Over Time](#5-trend-analysis-perfume-launch-trends-over-time-)  
-   - [6. Identifying Popular Fragrance Notes](#6-identifying-popular-fragrance-notes-)  
-   - [7. Visualizing Top-Selling Men’s Perfumes](#7-visualizing-top-selling-mens-perfumes-)  
-4. [Graphical Insights](#graphical-insights-)  
-5. [Summary](#summary-)  
-
+1. [Project Overview](#project-overview)  
+2. [Tools and Technologies](#tools-and-technologies)  
+3. [Step-by-Step Code Overview](#step-by-step-code-overview)  
+   - [1. Data Import and Initial Exploration](#1-data-import-and-initial-exploration)  
+   - [2. Data Cleaning: Handling Missing Values and Duplicates](#2-data-cleaning-handling-missing-values-and-duplicates)  
+   - [3. Data Transformation: Aggregating Sales Data](#3-data-transformation-aggregating-sales-data)  
+   - [4. Price Distribution: Boxplot for Perfume Types](#4-price-distribution-boxplot-for-perfume-types)  
+   - [5. Trend Analysis: Perfume Launch Trends Over Time](#5-trend-analysis-perfume-launch-trends-over-time)  
+   - [6. Identifying Popular Fragrance Notes](#6-identifying-popular-fragrance-notes)  
+   - [7. Visualizing Top-Selling Men’s Perfumes](#7-visualizing-top-selling-mens-perfumes)  
+4. [Graphical Insights](#graphical-insights)  
+5. [Summary](#summary)  
+6. [References](#references)  
 
 ---
 
