@@ -130,7 +130,6 @@ plt.xlabel('Percent of all Perfumes')
 plt.ylabel('Total of Perfumes')
 plt.title('Most Popular Notes')
 
-#Made using ChatGPT
 for i in range(len(notes)):
     plt.text(notes['percent_of_all'].iloc[i], 
              notes['count'].iloc[i], 
