@@ -194,7 +194,7 @@ plt.xlabel('Price (USD)')
 
 This bar chart shows the top 25 men’s perfumes ranked by the number of sales. Calvin Klein, Versace, and Davidoff are among the most popular brands in men’s fragrance.
 
-![Top 25 Men Perfumes by number of sales](https://github.com/user-attachments/assets/3b3dd6ef-da9f-4e31-8bcc-613f8f0852ef)
+![Top 25 Men Perfumes by number of sales](https://github.com/user-attachments/assets/e4883e7e-76c5-4873-bcf6-588e823f4f7e)
 
 
 ```python
