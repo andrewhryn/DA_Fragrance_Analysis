@@ -18,19 +18,23 @@ This project dives into the world of fragrance sales, uncovering key insights su
 
 ## Table of Contents 📚
 
-1. [Project Overview](#project-overview)  
-2. [Tools and Technologies](#tools-and-technologies)  
-3. [Step-by-Step Code Overview](#step-by-step-code-overview)  
-   - [1. Data Import and Initial Exploration](#1-data-import-and-initial-exploration)  
-   - [2. Data Cleaning: Handling Missing Values and Duplicates](#2-data-cleaning-handling-missing-values-and-duplicates)  
-   - [3. Data Transformation: Aggregating Sales Data](#3-data-transformation-aggregating-sales-data)  
-   - [4. Price Distribution: Boxplot for Perfume Types](#4-price-distribution-boxplot-for-perfume-types)  
-   - [5. Trend Analysis: Perfume Launch Trends Over Time](#5-trend-analysis-perfume-launch-trends-over-time)  
-   - [6. Identifying Popular Fragrance Notes](#6-identifying-popular-fragrance-notes)  
-   - [7. Visualizing Top-Selling Men’s Perfumes](#7-visualizing-top-selling-mens-perfumes)  
-4. [Graphical Insights](#graphical-insights)  
-5. [Summary](#summary)  
-6. [References](#references)
+
+- [Fragrance Analysis: Insights into the Perfume Industry with Data 🔬](#fragrance-analysis-insights-into-the-perfume-industry-with-data-)
+- [Project Overview 📊](#project-overview-)
+- [Tools and Technologies 🛠️](#tools-and-technologies-)
+- [Step-by-Step Code Overview 🧑‍💻](#step-by-step-code-overview-)
+  - [1. Data Import and Initial Exploration 📥](#1-data-import-and-initial-exploration-)
+  - [2. Data Cleaning: Handling Missing Values and Duplicates 🧹](#2-data-cleaning-handling-missing-values-and-duplicates-)
+  - [3. Data Transformation: Aggregating Sales Data 📊](#3-data-transformation-aggregating-sales-data-)
+- [Graphical Insights 📊](#graphical-insights-)
+  - [1. Most Popular Notes 🌟](#1-most-popular-notes-)
+  - [2. Brands that Created the Most Perfume Variations 🏆](#2-brands-that-created-the-most-perfume-variations-)
+  - [3. Price Distribution by Perfume Type 💵](#3-price-distribution-by-perfume-type-)
+  - [4. Top 25 Men’s Perfumes by Number of Sales 🚹](#4-top-25-mens-perfumes-by-number-of-sales-)
+  - [5. Trend of Perfumes Over the Last 20 Years 📈](#5-trend-of-perfumes-over-the-last-20-years-)
+  - [6. Total Sales for Different Perfume Categories 📊](#6-total-sales-for-different-perfume-categories-)
+- [Key Findings 🔑](#key-findings-)
+- [References 📝](#references-)
 
 ---
 
