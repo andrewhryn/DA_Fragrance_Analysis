@@ -30,7 +30,7 @@ This project dives into the world of fragrance sales, uncovering key insights su
    - [7. Visualizing Top-Selling Men’s Perfumes](#7-visualizing-top-selling-mens-perfumes)  
 4. [Graphical Insights](#graphical-insights)  
 5. [Summary](#summary)  
-6. [References](#references)  
+6. [References](#references)
 
 ---
 
